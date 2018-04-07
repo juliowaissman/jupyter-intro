@@ -13010,7 +13010,6 @@ AADwFIUUAAAAAAAAPEUhBQAAAAAAAE9RSAEAAAAAAMBT/wuNVAfgmM1vSgAAAABJRU5ErkJggg==
 <h1 id="Celdas-de-texto">Celdas de texto<a class="anchor-link" href="#Celdas-de-texto">&#182;</a></h1><ol>
 <li>Todo es <a href="https://en.wikipedia.org/wiki/Markdown">Markdown</a></li>
 <li>Una buena referencia rápida la puedes consultar <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">aquí</a></li>
-<li>Algunas cosas funcionan mejor con los comandos <em>mágicos</em> de Jupyter</li>
 </ol>
 
 </div>
@@ -13141,9 +13140,7 @@ Markdown | bien | feo
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Algunas-ecuaciones">Algunas ecuaciones<a class="anchor-link" href="#Algunas-ecuaciones">&#182;</a></h1>
-<pre><code>Podemos escribr cosas tanto en linea como $\forall x \in X, \quad \exists y \leq \epsilon$
-que es muy práctico para calculo 1. O cosas como $\cos (2\theta) = \cos^2 \theta - \sin^2 \theta$ que
-es útil en trigonometría. O tambien podemos escribir
+<pre><code>Podemos escribr cosas tanto en linea como $\forall x \in X, \quad \exists y \leq \epsilon$ que es muy práctico para calculo 1. O cosas como $\cos (2\theta) = \cos^2 \theta - \sin^2 \theta$ que es útil en trigonometría. O tambien podemos escribir
 $$
 \frac{n!}{k!(n-k)!} = \binom{n}{k},
 $$
@@ -13171,7 +13168,264 @@ $$</p>
 
 </div>
 </div>
-</div></div></section></section>
+</div></div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Ingresando-c&#243;digo-de-ejemplo-en-el-texto">Ingresando c&#243;digo de ejemplo en el texto<a class="anchor-link" href="#Ingresando-c&#243;digo-de-ejemplo-en-el-texto">&#182;</a></h1>
+<pre><code>```python
+def fibo(n):
+    def fibo_r(x, y, acc):
+        return y if acc &lt; 2 else fibo_r(y, x + y, acc - 1)
+    return fibo_r(1, 1, n)
+`` `</code></pre>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fibo</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">fibo_r</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">acc</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">y</span> <span class="k">if</span> <span class="n">acc</span> <span class="o">&lt;</span> <span class="mi">2</span> <span class="k">else</span> <span class="n">fibo_r</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="p">,</span> <span class="n">acc</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">fibo_r</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Celdas-de-c&#243;digo">Celdas de c&#243;digo<a class="anchor-link" href="#Celdas-de-c&#243;digo">&#182;</a></h1><ol>
+<li>Comandos <em>mágicos</em> de Jupyter </li>
+<li>Código ejecutado por el <em>Kernel</em> </li>
+</ol>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Comandos-m&#225;gicos">Comandos m&#225;gicos<a class="anchor-link" href="#Comandos-m&#225;gicos">&#182;</a></h1><ol>
+<li>Jupyter tiene una serie de <em>comandos mágicos</em>, </li>
+<li>Todos empiezan con '%'.</li>
+<li>Todos son específicos a Python</li>
+</ol>
+<p>Para probar, ejecuta en una casilla lo siguiente</p>
+
+<pre><code>%quickref
+%lsmagic</code></pre>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">lsmagic</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[27]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>Available line magics:
+%alias  %alias_magic  %autocall  %automagic  %autosave  %bookmark  %cat  %cd  %clear  %colors  %config  %connect_info  %cp  %debug  %dhist  %dirs  %doctest_mode  %ed  %edit  %env  %gui  %hist  %history  %killbgscripts  %ldir  %less  %lf  %lk  %ll  %load  %load_ext  %loadpy  %logoff  %logon  %logstart  %logstate  %logstop  %ls  %lsmagic  %lx  %macro  %magic  %man  %matplotlib  %mkdir  %more  %mv  %notebook  %page  %pastebin  %pdb  %pdef  %pdoc  %pfile  %pinfo  %pinfo2  %popd  %pprint  %precision  %profile  %prun  %psearch  %psource  %pushd  %pwd  %pycat  %pylab  %qtconsole  %quickref  %recall  %rehashx  %reload_ext  %rep  %rerun  %reset  %reset_selective  %rm  %rmdir  %run  %save  %sc  %set_env  %store  %sx  %system  %tb  %time  %timeit  %unalias  %unload_ext  %who  %who_ls  %whos  %xdel  %xmode
+
+Available cell magics:
+%%!  %%HTML  %%SVG  %%bash  %%capture  %%debug  %%file  %%html  %%javascript  %%js  %%latex  %%markdown  %%perl  %%prun  %%pypy  %%python  %%python2  %%python3  %%ruby  %%script  %%sh  %%svg  %%sx  %%system  %%time  %%timeit  %%writefile
+
+Automagic is ON, % prefix IS NOT needed for line magics.</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">fibo</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">fibo_r</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">acc</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">y</span> <span class="k">if</span> <span class="n">acc</span> <span class="o">&lt;</span> <span class="mi">2</span> <span class="k">else</span> <span class="n">fibo_r</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="p">,</span> <span class="n">acc</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">fibo_r</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">fibo</span><span class="p">(</span><span class="mi">4</span><span class="p">))</span>
+<span class="n">display</span><span class="p">(</span><span class="n">fibo</span><span class="p">(</span><span class="mi">20</span><span class="p">))</span>
+<span class="o">%</span><span class="k">timeit</span> fibo(20)
+
+<span class="c1"># ¿Y que pasa si ejecutas %prun fibo(200)?</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+
+
+<div class="output_text output_subarea ">
+<pre>5</pre>
+</div>
+
+</div>
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+
+
+<div class="output_text output_subarea ">
+<pre>10946</pre>
+</div>
+
+</div>
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>8.52 µs ± 463 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[47]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Comandos mágicos que mandan llamar al shell </span>
+<span class="o">!</span>which python
+
+<span class="o">%</span><span class="k">ls</span>
+
+<span class="o">%</span><span class="k">pwd</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>/Users/juliowaissman/anaconda3/bin/python
+LICENSE               index.html            <span class="ansi-cyan-intense-fg ansi-bold">reveal.js</span>/
+README.md             jupyter_basico.ipynb
+<span class="ansi-cyan-intense-fg ansi-bold">imagenes</span>/             <span class="ansi-red-fg">publish.sh</span>*
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[47]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;/Users/juliowaissman/Documents/cursos material/Capacitacion_variadita/jupyter-intro&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Tambien-existe-la-biblioteca-de-Ipython">Tambien existe la biblioteca de Ipython<a class="anchor-link" href="#Tambien-existe-la-biblioteca-de-Ipython">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[48]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="k">import</span> <span class="n">YouTubeVideo</span>
+<span class="c1"># a talk about IPython at Sage Days at U. Washington, Seattle.</span>
+<span class="c1"># Video credit: William Stein.</span>
+<span class="n">YouTubeVideo</span><span class="p">(</span><span class="s1">&#39;1j_HxD4iLn8&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[48]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+
+        <iframe
+            width="400"
+            height="300"
+            src="https://www.youtube.com/embed/1j_HxD4iLn8"
+            frameborder="0"
+            allowfullscreen
+        ></iframe>
+        
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></section></section>
 </div>
 </div>
 
