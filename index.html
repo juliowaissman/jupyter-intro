@@ -12668,6 +12668,24 @@ $ mv toto.slides.html index.html</code></pre>
 
 </div>
 </div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="&#191;Y-si-no-funciona?">&#191;Y si no funciona?<a class="anchor-link" href="#&#191;Y-si-no-funciona?">&#182;</a></h1><p>Es que la version de <code>reveal.js</code> y la de Jupyter (y el soporte de gihub por gh-pages inclusive) no funcionan correctamente. En ese caso hay que usar la versión en linea de <code>reveal.js</code>.</p>
+
+<pre><code>$ jupyter-nbconvert --to slides toto.ipynb --reveal-prefix="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.1.0"
+$ mv toto.slides.html index.html</code></pre>
+<ol>
+<li><p>Tanto <code>reveal.js</code>como <code>mathjax</code> se encuentran en linea, por lo que la presentación no puede ser utilizada sin conexión a internet.</p>
+</li>
+<li><p>Para publicarlo en github, es necesario hacerlo desde la rama <code>gh-pages</code></p>
+</li>
+</ol>
+
+</div>
+</div>
 </div></section></section>
 </div>
 </div>
