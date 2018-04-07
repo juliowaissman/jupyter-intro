@@ -13194,7 +13194,7 @@ def fibo(n):
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Celdas-de-c&#243;digo">Celdas de c&#243;digo<a class="anchor-link" href="#Celdas-de-c&#243;digo">&#182;</a></h1><ol>
-<li>Comandos <em>mágicos</em> de Jupyter </li>
+<li>Comandos <a href="http://ipython.readthedocs.io/en/stable/interactive/magics.html"><em>mágicos</em> de Jupyter</a> </li>
 <li>Código ejecutado por el <em>Kernel</em> </li>
 </ol>
 
@@ -13264,6 +13264,7 @@ Automagic is ON, % prefix IS NOT needed for line magics.</pre>
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">fibo</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
     <span class="k">def</span> <span class="nf">fibo_r</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">acc</span><span class="p">):</span>
+        
         <span class="k">return</span> <span class="n">y</span> <span class="k">if</span> <span class="n">acc</span> <span class="o">&lt;</span> <span class="mi">2</span> <span class="k">else</span> <span class="n">fibo_r</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="p">,</span> <span class="n">acc</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">fibo_r</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
 
@@ -13425,6 +13426,140 @@ README.md             jupyter_basico.ipynb
 </div>
 </div>
 
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="&#191;Y-el-c&#243;digo?">&#191;Y el c&#243;digo?<a class="anchor-link" href="#&#191;Y-el-c&#243;digo?">&#182;</a></h1><ul>
+<li>Depende de lo que quieras hacer. </li>
+<li>Se puede hacer uso intensivo del autocompletado</li>
+<li>Igualmente, se tiene la documentación de todas las funciones</li>
+<li>Prácticamente todo lo que se hace en python funciona en Jupyter,
+sin embargo, se usa principalmente con:<ul>
+<li><a href="https://nbviewer.jupyter.org/github/IA-UNISON/tarea07-aprendizaje-supervisado/blob/master/libretas/intro_numpy.ipynb"><code>numpy</code> y <code>matplotlib</code></a></li>
+<li><a href="https://nbviewer.jupyter.org/github/IA-UNISON/tarea08-aprendizaje-no-supervisado/blob/master/Introducción%20a%20Pandas.ipynb"><code>pandas</code></a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="&#191;Y-si-quiero-ejecutar-y-guardar-mis-libretas-en-linea?">&#191;Y si quiero ejecutar y guardar mis libretas en linea?<a class="anchor-link" href="#&#191;Y-si-quiero-ejecutar-y-guardar-mis-libretas-en-linea?">&#182;</a></h1><p>Dos opciones:</p>
+<ol>
+<li><p><a href="https://colab.research.google.com">Colab</a>. Libre, pero de <em>Google</em> (se usa desde <em>drive</em>)</p>
+<ul>
+<li>Ejemplo de <a href="https://colab.research.google.com/notebooks/mlcc/intro_to_pandas.ipynb?hl=es">introducción a pandas</a></li>
+</ul>
+</li>
+<li><p><a href="https://mybinder.org">Binder</a>. Libre pero en etapa <em>Beta</em> y algo tardado (se usa desde <em>github</em>). No siepre funciona con las bibliotecas que se consideran de <em>base</em>.</p>
+</li>
+</ol>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Agregando-otros-Kernels-a-Jupyter">Agregando otros Kernels a Jupyter<a class="anchor-link" href="#Agregando-otros-Kernels-a-Jupyter">&#182;</a></h1><ol>
+<li>El nombre viene de <strong>Ju</strong>lia, <strong>pyt</strong>hon y <strong>R</strong>.</li>
+<li>Instalar <em>R</em>, y <strong>desde R en la terminal</strong>:<div class="highlight"><pre><span></span>install.packages<span class="p">(</span><span class="kt">c</span><span class="p">(</span><span class="s">&#39;repr&#39;</span><span class="p">,</span> <span class="s">&#39;IRdisplay&#39;</span><span class="p">,</span> <span class="s">&#39;evaluate&#39;</span><span class="p">,</span> <span class="s">&#39;crayon&#39;</span><span class="p">,</span> 
+                   <span class="s">&#39;pbdZMQ&#39;</span><span class="p">,</span> <span class="s">&#39;devtools&#39;</span><span class="p">,</span> <span class="s">&#39;uuid&#39;</span><span class="p">,</span> <span class="s">&#39;digest&#39;</span><span class="p">))</span>
+devtools<span class="o">::</span>install_github<span class="p">(</span><span class="s">&#39;IRkernel/IRkernel&#39;</span><span class="p">)</span>
+IRkernel<span class="o">::</span>installspec<span class="p">()</span>
+</pre></div>
+</li>
+<li>Instalar <em>Julia</em>, y luego ejecutar dentro del <em>repl</em> de <em>Julia</em><div class="highlight"><pre><span></span><span class="n">Pkg</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s">&quot;IJulia&quot;</span><span class="p">)</span>
+</pre></div>
+</li>
+</ol>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="&#191;Y-si-quiero-agregar-un-interprete-de-C++?">&#191;Y si quiero agregar un interprete de C++?<a class="anchor-link" href="#&#191;Y-si-quiero-agregar-un-interprete-de-C++?">&#182;</a></h1><ol>
+<li>Necesito tener instalado Jupyter a través de la distribución <a href="https://www.anaconda.com/distribution/">Anaconda</a></li>
+<li>Usar el <em>interprete</em> (basado en python) <a href="https://github.com/QuantStack/xeus-cling">Xeus-cling</a></li>
+</ol>
+
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Para instalar, desde la consola:</p>
+
+<pre><code>$ conda create -n cling
+$ source activate cling
+$ conda install xeus-cling notebook -c QuantStack -c conda-forge
+$ source deactivate</code></pre>
+
+</div>
+</div>
+</div></div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Para probar</p>
+
+<pre><code>$ source activate cling
+$ jupyter notebook</code></pre>
+
+</div>
+</div>
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="&#191;Y-si-quiero-hacer-una-presentaci&#243;n-en-Jupyter?">&#191;Y si quiero hacer una presentaci&#243;n en Jupyter?<a class="anchor-link" href="#&#191;Y-si-quiero-hacer-una-presentaci&#243;n-en-Jupyter?">&#182;</a></h1><ol>
+<li>Habilitar la edición de diapositivas en el menú (View -&gt; Cell Toolbar -&gt; Slideshow)</li>
+<li><p>Seleccionar el tipo de diapositiva:</p>
+<ol>
+<li><code>Slide</code> Transparencia a la derecha</li>
+<li><code>Subslide</code> Transparencia hacia abajo</li>
+<li><code>Fragment</code> Para completar la transparencia paso a paso</li>
+<li><code>-</code> Para continuar con la transparencia</li>
+</ol>
+</li>
+<li><p>Compilar para generar el html usando <a href="https://revealjs.com/">reveal.js</a></p>
+</li>
+</ol>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="&#191;Y-como-la-compilada?">&#191;Y como la compilada?<a class="anchor-link" href="#&#191;Y-como-la-compilada?">&#182;</a></h1><ol>
+<li>Ir al sitio de github de <a href="https://github.com/juliowaissman/jupyter-intro">esta presentación</a> </li>
+<li>Hacer un <code>fork</code>, o un <code>clone</code> o solamente descargar la carpeta completa <code>reveal.js</code></li>
+<li>Escribir tu propio documento ipynb (i.e. toto.ipynb)</li>
+<li>Ejecutar en la linea de comando
+<pre><code>$ jupyter-nbconvert --to slides toto.ipynb --reveal-prefix=reveal.js
+$ mv toto.slides.html index.html</code></pre>
+</li>
+<li>Abrir <code>index.html</code> en el navegador.</li>
+</ol>
+
+</div>
+</div>
 </div></section></section>
 </div>
 </div>
