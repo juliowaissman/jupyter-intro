@@ -12051,7 +12051,7 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Todo-se-queda-en-memoria">Todo se queda en memoria<a class="anchor-link" href="#Todo-se-queda-en-memoria">&#182;</a></h1><p>Una vez ejecutado un comando, mientras no se reinicie el kernel</p>
+<h1 id="Todo-se-queda-en-memoria">Todo se queda en memoria<a class="anchor-link" href="#Todo-se-queda-en-memoria">&#182;</a></h1><p>mientras no se reinicie el kernel</p>
 
 </div>
 </div>
@@ -12989,7 +12989,189 @@ AADwFIUUAAAAAAAAPEUhBQAAAAAAAE9RSAEAAAAAAMBT/wuNVAfgmM1vSgAAAABJRU5ErkJggg==
 </div>
 </div>
 
-</div></section></section>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Vamos-por-partes">Vamos por partes<a class="anchor-link" href="#Vamos-por-partes">&#182;</a></h1><ol>
+<li>¿Qué puedo agregar en las celdas de texto?</li>
+<li>¿Qué puedo agregar en la celdas de código (aparte de código, por supuesto)?</li>
+<li>¿Cómo puedo cambiar el Kernel para usar otro lenguaje de programación?</li>
+</ol>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Celdas-de-texto">Celdas de texto<a class="anchor-link" href="#Celdas-de-texto">&#182;</a></h1><ol>
+<li>Todo es <a href="https://en.wikipedia.org/wiki/Markdown">Markdown</a></li>
+<li>Una buena referencia rápida la puedes consultar <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">aquí</a></li>
+<li>Algunas cosas funcionan mejor con los comandos <em>mágicos</em> de Jupyter</li>
+</ol>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Insertar-im&#225;genes">Insertar im&#225;genes<a class="anchor-link" href="#Insertar-im&#225;genes">&#182;</a></h1><ul>
+<li><p>Lo más fácil es:</p>
+
+<pre><code>![texto](imagenes/jupyter.png)</code></pre>
+</li>
+<li><p>Pero muchas veces es más conveniente</p>
+
+<pre><code>&lt;img src="imagenes/jupyter.png" width="70"&gt;</code></pre>
+</li>
+</ul>
+
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="imagenes/jupyter.png" alt="texto">
+<img src="imagenes/jupyter.png" width="70"></p>
+
+</div>
+</div>
+</div></div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Cuadros">Cuadros<a class="anchor-link" href="#Cuadros">&#182;</a></h1><ul>
+<li>Debe haber al menos trés lineas para marcar una separación</li>
+<li>Los delimitadores externos son opcionales</li>
+</ul>
+
+<pre><code>| Col 1         | Col 2         | Col 3  |
+| ------------- |:-------------:| ------:|
+| Esta          | Esta          | \$1600 |
+| columna       | se encuentra  |   \$12 |
+| a la derecha  | centrada      |    \$1 |
+
+
+Markdown | bien | feo
+---|---|---
+*No se ve muy bien* | ~el código~ | **pero genera un cuadro decente**
+1 | 2 | 3</code></pre>
+
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<table>
+<thead><tr>
+<th>Col 1</th>
+<th style="text-align:center">Col 2</th>
+<th style="text-align:right">Col 3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Esta</td>
+<td style="text-align:center">Esta</td>
+<td style="text-align:right">\$1600</td>
+</tr>
+<tr>
+<td>columna</td>
+<td style="text-align:center">se encuentra</td>
+<td style="text-align:right">\$12</td>
+</tr>
+<tr>
+<td>a la derecha</td>
+<td style="text-align:center">centrada</td>
+<td style="text-align:right">\$1</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead><tr>
+<th>Markdown</th>
+<th>bien</th>
+<th>feo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>No se ve muy bien</em></td>
+<td>~el código~</td>
+<td><strong>pero genera un cuadro decente</strong></td>
+</tr>
+<tr>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div></div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Notaci&#243;n-matem&#225;tica">Notaci&#243;n matem&#225;tica<a class="anchor-link" href="#Notaci&#243;n-matem&#225;tica">&#182;</a></h1><ol>
+<li>Jupyter usa por default <a href="https://www.mathjax.org">mathjax</a></li>
+<li>Las ecuaciones <em>en linea</em> van entre signos \$ ecuación \$</li>
+<li>Las ecuaciones en propia linea van entre \$\$ ecuación \$\$</li>
+<li>Utiliza la notación estandard de $\LaTeX$</li>
+<li>Un buen lugar de consulta está <a href="https://en.wikibooks.org/wiki/LaTeX/Mathematics">aquí</a></li>
+</ol>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Algunas-ecuaciones">Algunas ecuaciones<a class="anchor-link" href="#Algunas-ecuaciones">&#182;</a></h1>
+<pre><code>Podemos escribr cosas tanto en linea como $\forall x \in X, \quad \exists y \leq \epsilon$
+que es muy práctico para calculo 1. O cosas como $\cos (2\theta) = \cos^2 \theta - \sin^2 \theta$ que
+es útil en trigonometría. O tambien podemos escribir
+$$
+\frac{n!}{k!(n-k)!} = \binom{n}{k},
+$$
+
+$$
+P\left(A=2\middle|\frac{A^2}{B}&gt;4\right) = \int_0^\infty \mathrm{e}^{-x}\,\mathrm{d}x
+$$</code></pre>
+
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Podemos escribr cosas tanto en linea como $\forall x \in X, \quad \exists y \leq \epsilon$
+que es muy práctico para calculo 1. O cosas como $\cos (2\theta) = \cos^2 \theta - \sin^2 \theta$ que
+es útil en trigonometría. O tambien podemos escribir
+$$
+\frac{n!}{k!(n-k)!} = \binom{n}{k},
+$$</p>
+<p>$$
+P\left(A=2\middle|\frac{A^2}{B}&gt;4\right) = \int_0^\infty \mathrm{e}^{-x}\,\mathrm{d}x
+$$</p>
+
+</div>
+</div>
+</div></div></section></section>
 </div>
 </div>
 
