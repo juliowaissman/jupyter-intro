@@ -12700,7 +12700,7 @@ $ jupyter notebook</code></pre>
 </li>
 </ol>
 </li>
-<li><p>Compilar para generar el html usando <a href="https://revealjs.com/">reveal.js</a></p>
+<li><p>CGenerar la presentación en html usando <a href="https://revealjs.com/">reveal.js</a></p>
 </li>
 </ol>
 
@@ -12711,28 +12711,10 @@ $ jupyter notebook</code></pre>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="&#191;Y-como-la-compilada?">&#191;Y como la compilada?<a class="anchor-link" href="#&#191;Y-como-la-compilada?">&#182;</a></h1><ol>
-<li>Ir al sitio de github de <a href="https://github.com/juliowaissman/jupyter-intro">esta presentación</a> </li>
-<li>Hacer un <code>fork</code>, o un <code>clone</code> o solamente descargar la carpeta completa <code>reveal.js</code></li>
-<li>Escribir tu propio documento ipynb (i.e. toto.ipynb)</li>
-<li>Ejecutar en la linea de comando
-<pre><code>$ jupyter-nbconvert --to slides toto.ipynb --reveal-prefix=reveal.js
-$ mv toto.slides.html index.html</code></pre>
-</li>
-<li>Abrir <code>index.html</code> en el navegador.</li>
-</ol>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="&#191;Y-si-no-funciona?">&#191;Y si no funciona?<a class="anchor-link" href="#&#191;Y-si-no-funciona?">&#182;</a></h1><p>Es que la version de <code>reveal.js</code> y la de Jupyter (y el soporte de gihub por gh-pages inclusive) no funcionan correctamente. En ese caso hay que usar la versión en linea de <code>reveal.js</code>.</p>
-
-<pre><code>$ jupyter-nbconvert --to slides toto.ipynb --reveal-prefix="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.1.0"
-$ mv toto.slides.html index.html</code></pre>
+<h1 id="&#191;Y-como-se-genera-la-presentaci&#243;n?">&#191;Y como se genera la presentaci&#243;n?<a class="anchor-link" href="#&#191;Y-como-se-genera-la-presentaci&#243;n?">&#182;</a></h1><p>Para generar una presentación que se pueda ver como página de Github es necesario usar la version de <code>reveal.js</code> en linea, y con ella transformar la libreta en una presentación en <code>html</code>. La conversion (y luego cambiar su nombre por <code>index.html</code> se hace con el siguiente código (asumiendo que la libreta se llama <code>toto.ipynb</code>).</p>
+<div class="highlight"><pre><span></span>$ jupyter-nbconvert --to slides toto.ipynb --reveal-prefix<span class="o">=</span><span class="s2">&quot;https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.1.0&quot;</span>
+$ mv toto.slides.html index.html
+</pre></div>
 <ol>
 <li><p>Tanto <code>reveal.js</code> como <code>mathjax</code> se encuentran en linea, por lo que la presentación no puede ser utilizada sin conexión a internet.</p>
 </li>
